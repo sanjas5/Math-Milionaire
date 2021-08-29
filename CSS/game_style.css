@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+* {
+	font-size: 30px;
+	color: white;
+}
+body {
+	background: url(../Images/background.jpg);
+	background-size: cover;
+	font-family: 'Quicksand', sans-serif;
+}
+
+button {
+	border-radius: 30px;
+	padding: 10px;
+	background-color: rgb(15, 48, 74);
+	border: 1px solid rgb(211, 189, 44);
+	border-radius: 30px;
+	text-align: center;
+	color: rgb(211, 189, 44);
+}
+a {
+	color: rgb(211, 189, 44);
+	margin-left: 10px;
+}
+#title {
+	color: rgb(211, 189, 44);
+	background-color: rgb(15, 48, 74);
+	border: 1px solid rgb(211, 189, 44);
+	border-radius: 10px;
+	text-align: center;
+	padding: 5px;
+}
+#game_informations {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	margin-right: 0;
+}
+
+#buttons {
+	margin-top: 20px;
+	margin-left: 10px;
+	display: flex;
+	flex-direction: row;
+}
+#buttons * {
+	background-color: rgb(15, 48, 74);
+	border: 1px solid rgb(211, 189, 44);
+	border-radius: 10px;
+	text-align: center;
+	margin: auto 5px;
+	padding: 5px;
+}
+
+#game {
+	display: flex;
+	flex-direction: column;
+}
+
+#game_main {
+	width: 50vw;
+}
+
+#question {
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(15, 48, 74);
+	border: 1px solid rgb(211, 189, 44);
+	border-radius: 10px;
+	padding: 10px;
+	justify-content: center;
+	margin-top: 20px;
+	padding: 15vh;
+}
+#question * {
+	font-size: 40px;
+}
+#answers {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+}
+
+#first_answer,
+#second_answer,
+#third_answer,
+#fourth_answer {
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(15, 48, 74);
+	border: 1px solid rgb(211, 189, 44);
+	border-radius: 10px;
+	padding: 10px;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+#first_answer:active,
+#second_answer:active,
+#third_answer:active,
+#fourth_answer:active {
+	background-color: rgb(211, 189, 44);
+}
+:active > #first,
+:active > #second,
+:active > #third,
+:active > #fourth,
+:active > .letter {
+	color: rgb(0, 0, 0);
+	font-weight: bolder;
+}
+#money_list {
+	list-style-type: none;
+	margin-left: 15px;
+	margin-top: 20px;
+	background-color: rgb(15, 48, 74);
+	border: 1px solid rgb(211, 189, 44);
+	border-radius: 10px;
+	padding: 15px;
+	justify-content: center;
+}
+#money_list li {
+	font-size: 22px;
+	padding: 2px;
+	text-align: center;
+}
+#input {
+	background-color: rgb(15, 48, 74);
+	border: 1px solid rgb(211, 189, 44);
+	border-radius: 30px;
+	position: absolute;
+	margin-top: 150px;
+	margin: 150px auto;
+	margin-left: 10vw;
+	font-size: 20px;
+	padding: 20px;
+}
+#input input {
+	background-color: rgb(15, 48, 74);
+	color: rgb(211, 189, 44);
+	border: none;
+	border-bottom: 1px solid rgb(211, 189, 44);
+	outline: none;
+	font-family: 'Petit Formal Script', cursive;
+	text-align: center;
+}
+
+#input button {
+	border-radius: 30px;
+	padding: 10px;
+	background-color: rgb(15, 48, 74);
+	border: 1px solid rgb(211, 189, 44);
+	border-radius: 30px;
+	text-align: center;
+	color: rgb(211, 189, 44);
+}
+.letter {
+	color: rgb(211, 189, 44);
+}
+
+.white {
+	color: white;
+}
+
+.yellow {
+	color: rgb(211, 189, 44);
+}
+
+button {
+	outline: 0;
+}
+
+#win,
+#quit,
+#game_over {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	margin: 150px 5vw;
+	padding: 25px;
+	background-color: rgb(15, 48, 74);
+	border: 1px solid rgb(211, 189, 44);
+	border-radius: 30px;
+}
+#win p,
+#quit p,
+#game_over p {
+	text-align: center;
+	padding-right: 10px;
+}
+@media only screen and (max-width: 900px) {
+	#input,
+	#win,
+	#quit,
+	#game_over {
+		margin: 150px 0 auto;
+	}
+	#input * {
+		font-size: 18px;
+	}
+	#game_informations {
+		flex-direction: column;
+	}
+}
+
+/* The Modal (background), https://www.w3schools.com/howto/howto_css_modals.asp*/
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: rgb(15, 48, 74);
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#modal_graph {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#a,
+#b,
+#c,
+#d {
+	background-color: rgb(211, 189, 44);
+	width: 40px;
+}
+
+#a_blue,
+#b_blue,
+#c_blue,
+#d_blue {
+	background-color: rgb(15, 48, 74);
+	width: 40px;
+}
+
+#graph {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}

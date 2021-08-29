@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+* {
+	font-family: 'Quicksand', sans-serif;
+}
+body {
+	color: rgb(211, 189, 44);
+	background-color: rgb(15, 48, 74);
+}
+ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+}
+ul a {
+	color: white;
+	padding: 10px;
+	font-size: 20px;
+}
+#first_page {
+	text-align: center;
+	margin-top: 200px;
+}
+#first_page a {
+	color: white;
+	font-size: 20px;
+}
+#title {
+	font-family: 'Cinzel', serif;
+}

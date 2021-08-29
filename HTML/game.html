@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matematički milijunaš</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../css/game_style.css">
+  <link rel="icon" href="../Images/milijunas.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="input">
+    <label> Napišite svoje ime: </label>
+    <input type="text" id="name"  value="" />
+    <button onclick="goToGame()"> OK!</button>
+  </div>
+  <div id="game_page" style="visibility: hidden;">
+    <div id="title">Ko želi biti matematički milijunaš? <a href="index.html">Početna </a>
+    </div>
+    
+    <div id="game_informations" >
+    <div id="game_main">
+      <div id="game">
+        <div id="question">
+          <div id="first_number"></div>
+          <div id="operator"></div>
+          <div id="second_number"></div> 
+        </div>
+        <div id="answers">
+          <div id="first_answer">
+            <div class="letter">A) </div>
+            <div id="first" value=""></div>
+          </div>
+          <div id="second_answer">
+            <div class="letter">B) </div>
+            <div id="second" value=""></div>
+          </div>
+          <div id="third_answer">
+            <div class="letter">C) </div>
+            <div id="third" value=""></div>
+          </div>
+          <div id="fourth_answer">
+            <div class="letter">D) </div>
+            <div id="fourth" value=""></div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div id="money">
+      <div id="buttons">
+        <button id="joker_public">Joker publike</button>
+        <button id="joker_50_50"> Joker 50:50</button>
+        <button id="quit_button">Odustajete li?</button>
+      </div>
+      <ul id="money_list">
+        <li id="1000000" class="white">15: 1000000 bodova</li>
+        <li id="500000" class="yellow">14:  500000 bodova</li>
+        <li id="250000" class="yellow">13:  250000 bodova</li>
+        <li id="125000" class="yellow">12:  125000 bodova</li>
+        <li id="64000" class="yellow">11:  64000 bodova</li>
+        <li id="32000" class="white">10:  32000 bodova</li>
+        <li id="16000" class="yellow">9: 16000 bodova</li>
+        <li id="8000" class="yellow">8:  8000 bodova</li>
+        <li id="4000" class="yellow">7:  4000 bodova</li>
+        <li id="2000" class="yellow">6:  2000 bodova</li>
+        <li id="1000" class="white">5:  1000 bodova</li>
+        <li id="500" class="yellow">4:  500 bodova</li>
+        <li id="300" class="yellow">3:  300 bodova</li>
+        <li id="200"class="yellow">2:  200 bodova</li>
+        <li id="100" class="yellow">1:  100 bodova</li>
+      </ul>
+    
+  </div>
+</div>
+  </div>
+  <div id="win" style="visibility: hidden;" >
+    <p> </p><p class="name">Anonimni</p><p>, Čestitke, postali ste matematički milijunaš!</p>
+    <button onclick="goToGame()"> Nova igra</button>
+    </div>
+    <div id="quit"  style="visibility: hidden;" >
+      <p> Žao nam je jer ste odustali </p><p class="name" value="">Anonimni</p><p><span>  ,  osvojili ste </span></p><p class="score">0</p><p><span> bodova!</span> </p>
+      <button onclick="goToGame()">Nova igra</button>
+    </div>
+
+  <div id="game_over" style="visibility: hidden;">
+    <p> Više sreće drugi put</p> <p class="name">Anonimni</p><p>, osvojili ste </p><p class="score">0</p> <p> bodova!  </p>
+    <button onclick="goToGame()">Nova igra</button>
+  </div>
+
+  
+<!-- The Modal  pomoc:  https://www.w3schools.com/howto/howto_css_modals.asp-->  
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1 style="text-align: center;">Publika je glasala:</h1>
+    <div id="modal_graph">
+    <div class="graph">
+      <div id="a_blue"></div> 
+      <div id="a"></div>
+      <div> (A) </div>
+    </div>
+    <div class="graph">
+      <div id="b_blue"></div>
+      <div id="b"></div>
+      <div> (B) </div>
+    </div>
+    <div class="graph">
+      <div id="c_blue"></div>
+      <div id="c"></div>
+      <div> (C) </div>
+    </div>
+    <div class="graph">
+      <div id="d_blue"></div>
+      <div id="d"></div>
+      <div> (D) </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

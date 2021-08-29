@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+* {
+	padding: 15px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+body {
+	background-color: rgb(15, 48, 74);
+}
+
+h1 {
+	color: rgb(211, 189, 44);
+	font-family: 'Cinzel', serif;
+}
+
+p {
+	color: white;
+	word-spacing: 0.2rem;
+	font-size: 20px;
+	text-align: justify;
+}
+
